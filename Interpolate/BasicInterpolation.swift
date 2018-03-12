@@ -6,6 +6,12 @@
 //  Copyright © 2016 Roy Marmelstein. All rights reserved.
 //
 
+/*
+ *Mar 11 2018, updated by Hai Kieu : Added some algorithms of interpolation from:
+    + https://github.com/robb/RBBAnimation/blob/a29cafe2fa91e62573cc9967990b0ad2a6b17a76/RBBAnimation/RBBEasingFunction.m
+    + https://github.com/DavdRoman/Popsicle/blob/master/Popsicle/EasingFunction.swift
+*/
+
 import Foundation
 
 /**
@@ -17,27 +23,40 @@ public enum BasicInterpolation: InterpolationFunction {
     /// Ease in Quad interpolation.
     @available(*, renamed: "easeInQuad")
     case easeIn
-    case easeInQuad
+    case easeInQuad     //New added on Mar 11,2018
     /// Ease out Quad interpolation.
     @available(*, renamed: "easeOutQuad")
     case easeOut
     /// Ease out Quad interpolation.
-    case easeOutQuad
+    case easeOutQuad    //New added on Mar 11,2018
     /// Ease in Quad interpolation.
     @available(*, renamed: "easeInOutQuad")
     case easeInOut
     /// Ease in Quad interpolation.
-    case easeInOutQuad
+    case easeInOutQuad  //New added on Mar 11,2018
     /// Ease in Quad interpolation.
-    case easeInCubic
+    case easeInCubic    //New added on Mar 11,2018
     /// Ease out Quad interpolation.
-    case easeOutCubic
+    case easeOutCubic   //New added on Mar 11,2018
     /// Ease in out Quad interpolation.
-    case easeInOutCubic
+    case easeInOutCubic //New added on Mar 11,2018
     /// Ease in Bounce interpolation.
-    case easeInBounce
+    case easeInBounce   //New added on Mar 11,2018
     /// Ease out Bounce interpolation.
-    case easeOutBounce
+    case easeOutBounce  //New added on Mar 11,2018
+    /// Ease in Quart interpolation.
+    case easeInQuart    //New added on Mar 11,2018
+    /// Ease out Quart interpolation.
+    case easeOutQuart   //New added on Mar 11,2018
+    /// Ease in out Quart interpolation.
+    case easeInOutQuart //New added on Mar 11,2018
+    /// Ease in Expo interpolation.
+    case easeInExpo     //New added on Mar 11,2018
+    /// Ease out Expo interpolation.
+    case easeOutExpo    //New added on Mar 11,2018
+    /// Ease in out Expo interpolation.
+    case easeInOutExpo  //New added on Mar 11,2018
+    
     /**
      Apply interpolation function
      
@@ -83,6 +102,29 @@ public enum BasicInterpolation: InterpolationFunction {
             }
             
             return (63.0 / 64.0) + (pow((11.0 / 4.0), 2) * pow(progress - (21.0 / 22.0), 2))
+        case .easeInQuart:
+            return progress * progress * progress * progress
+        case .easeOutQuart:
+            return 1 - pow(progress - 1, 4)
+        case .easeInOutQuart:
+            if (progress < 0.5) {
+                return 8 * pow(progress, 4)
+            } else {
+                return -1 / 2 * pow(2 * progress - 2, 4) + 1
+            }
+        case .easeInExpo:
+            return progress == 0 ? 0.0 : pow(2, 10 * (progress - 1))
+        case .easeOutExpo:
+            return progress == 1.0 ? 1 : 1 - pow(2, -10 * progress)
+        case .easeInOutExpo:
+            if (progress == 0) { return 0.0 }
+            if (progress == 1) { return 1.0 }
+            
+            if (progress < 0.5) {
+                return pow(2, 10 * (2 * progress - 1)) / 2;
+            } else {
+                return 1 - pow(2, -10 * (2 * progress - 1)) / 2;
+            }
         }
     }
 }
