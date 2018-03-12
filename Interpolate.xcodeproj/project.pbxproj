@@ -20,6 +20,8 @@
 		3448A0FD1CBA2A4400E818C2 /* Interpolate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448A0FC1CBA2A4400E818C2 /* Interpolate.swift */; };
 		347179CB1CBAEE410072B7AA /* BasicInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347179CA1CBAEE410072B7AA /* BasicInterpolation.swift */; };
 		34CF09A11CBAC7E800D1DD32 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CF09A01CBAC7E800D1DD32 /* Interpolatable.swift */; };
+		355C6B8620563F1000EFAE33 /* BezierInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C6B8520563F1000EFAE33 /* BezierInterpolation.swift */; };
+		355C6B8720563F1000EFAE33 /* BezierInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355C6B8520563F1000EFAE33 /* BezierInterpolation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		3448A0FC1CBA2A4400E818C2 /* Interpolate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolate.swift; sourceTree = "<group>"; };
 		347179CA1CBAEE410072B7AA /* BasicInterpolation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInterpolation.swift; sourceTree = "<group>"; };
 		34CF09A01CBAC7E800D1DD32 /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
+		355C6B8520563F1000EFAE33 /* BezierInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierInterpolation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 				343516861F72A77700338DD9 /* Info-tvOS.plist */,
 				3448A0FC1CBA2A4400E818C2 /* Interpolate.swift */,
 				347179CA1CBAEE410072B7AA /* BasicInterpolation.swift */,
+				355C6B8520563F1000EFAE33 /* BezierInterpolation.swift */,
 				3440FD311CD4B83000AC4603 /* SpringInterpolation.swift */,
 				34CF09A01CBAC7E800D1DD32 /* Interpolatable.swift */,
 			);
@@ -265,6 +269,7 @@
 				3440B2581CDFD0B3009A7712 /* Interpolatable.swift in Sources */,
 				3440B2591CDFD0B3009A7712 /* BasicInterpolation.swift in Sources */,
 				3440B25A1CDFD0B3009A7712 /* SpringInterpolation.swift in Sources */,
+				355C6B8720563F1000EFAE33 /* BezierInterpolation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +281,7 @@
 				34CF09A11CBAC7E800D1DD32 /* Interpolatable.swift in Sources */,
 				347179CB1CBAEE410072B7AA /* BasicInterpolation.swift in Sources */,
 				3440FD321CD4B83000AC4603 /* SpringInterpolation.swift in Sources */,
+				355C6B8620563F1000EFAE33 /* BezierInterpolation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
